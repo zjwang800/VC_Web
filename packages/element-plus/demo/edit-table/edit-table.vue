@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 500px">
+  <div style="">
     <vc-edit-table :tableData="data"></vc-edit-table>
   </div>
 </template>
