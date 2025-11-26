@@ -1,52 +1,63 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: '/table-custom-columns',
-      component: () => import('./table/table-custom-columns.vue'),
-      name: 'TableCustomColumns'
+      path: "/table-custom-columns",
+      component: () => import("./table/table-custom-columns.vue"),
+      name: "TableCustomColumns",
     },
     {
-      path: '/data-picker-shortcuts',
-      component: () => import('./data-picker/data-picker-shortcuts.vue'),
-      name: 'DataPickerShortcuts'
+      path: "/data-picker-shortcuts",
+      component: () => import("./data-picker/data-picker-shortcuts.vue"),
+      name: "DataPickerShortcuts",
     },
     {
-      path: '/menu-voice-cloud',
-      component: () => import('./menu/menu-voice-cloud.vue'),
-      name: 'MenuVoiceCloud'
-    },{
-      path:'/line-echart',
-      component: () => import('./echart/line-echart.vue'),
-      name: 'LineEchart'
+      path: "/menu-voice-cloud",
+      component: () => import("./menu/menu-voice-cloud.vue"),
+      name: "MenuVoiceCloud",
     },
     {
-      path: '/draggable',
-      component: () => import('./draggable/draggable.vue'),
-      name: 'Draggable'
+      path: "/line-echart",
+      component: () => import("./echart/line-echart.vue"),
+      name: "LineEchart",
     },
     {
-      path: '/ai-mark',
-      component: () => import('./ai-mark/ai-mark.vue'),
-      name: 'AiMark'
+      path: "/draggable",
+      component: () => import("./draggable/draggable.vue"),
+      name: "Draggable",
     },
     {
-      path: '/playback-timeline',
-      component: () => import('./playback-timeline/playback-timeline.vue'),
-      name: 'PlaybackTimeline'
+      path: "/ai-mark",
+      component: () => import("./ai-mark/ai-mark.vue"),
+      name: "AiMark",
     },
     {
-      path: '/typing-effect',
-      component: () => import('./typing-effect/typing-effect.vue'),
-      name: 'TypingEffect'
+      path: "/playback-timeline",
+      component: () => import("./playback-timeline/playback-timeline.vue"),
+      name: "PlaybackTimeline",
     },
     {
-      path: '/:pathMatch(.*)*',
-      redirect: '/table-custom-columns'
+      path: "/typing-effect",
+      component: () => import("./typing-effect/typing-effect.vue"),
+      name: "TypingEffect",
     },
-  ]
-})
+    {
+      path: "/import-file",
+      component: () => import("./import-file/import-file.vue"),
+      name: "ImportFile",
+    },
+    {
+      path: "/edit-table",
+      component: () => import("./edit-table/edit-table.vue"),
+      name: "EditTable",
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect: "/table-custom-columns",
+    },
+  ],
+});
 
-export default router
+export default router;
